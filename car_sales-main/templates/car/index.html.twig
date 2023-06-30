@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="bs-example" data-example-id="striped-table">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>PRICE</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for car in cars %}
+                <tr>
+                    <th scope="row">{{ car.id }}</th>
+                    <td>{{ car.Carname }}</td>
+                    <td>{{ car.Carprice }}</td>
+                    <td>
+                        <a href="{{ path('car_details' , {'id' : car.id}) }}" class='btn btn-success'>View</a>
+                        <a href="{{ path('car_edit' , {'id' : car.id}) }}" class='btn btn-default'>Edit</a>
+                        <a href="{{ path('car_delete' , {'id' : car.id}) }}" class='btn btn-danger'>Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="{{ path('car_create') }}"class="btn btn-primary" >Create</a></li>
+        </ul>
+    </div><!--/.nav-collapse -->
+{% endblock %}

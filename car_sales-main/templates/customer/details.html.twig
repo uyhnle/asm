@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a href="{{ path('customer_list') }}" class="btn btn-default">Back to Customer List</a>
+    <hr/>
+    <h2 class="page-header">Name: {{ customers.Customername }}</h2>
+    <ul class="list-group">
+        <li class="list-group-item">Email: {{ customers.Customermail }}</li>
+        <li class="list-group-item">Phone Number: {{ customers.Customerphone}}</li>
+        <li class="list-group-item">Address: {{ customers.Customeraddress}}</li>
+    </ul>
+{% endblock %}

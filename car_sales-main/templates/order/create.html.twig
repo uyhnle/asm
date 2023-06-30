@@ -1,0 +1,38 @@
+{%extends 'base.html.twig' %}
+{% block body %}
+    {{ form_start(form) }}
+
+    </div>
+    <div class="form-group">
+        <label for="Discount">Discount:</label>
+        {{ form_widget(form.Discount,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Discount'
+            }
+        }) }}
+    </div>
+
+    <div class="form-group">
+        <label for="Customer">CustomerID:</label>
+        {{ form_widget(form.Customer,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Customer'
+            }
+        }) }}
+    </div>
+
+    <div class="form-group">
+        <label for="Car">CarID:</label>
+        {{ form_widget(form.Car,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Discount'
+            }
+        }) }}
+    </div>
+
+    <input type="submit" name="create_customer" value="Create" class="btn btn-primary"/>
+    {{ form_end(form) }}
+{% endblock %}

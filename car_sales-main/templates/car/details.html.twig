@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a href="{{ path('car_list') }}" class="btn btn-default">Back to Car List </a>
+    <hr/>
+    <h2 class="page-header">{{ car.id }}</h2>
+    <ul class="list-group">
+        <li class="list-group-item">Name: {{ car.Carname }}</li>
+        <li class="list-group-item">Brand: {{ car.Carbrand }}</li>
+        <li class="list-group-item">Price: {{ car.Carprice }}</li>
+    </ul>
+{% endblock %}

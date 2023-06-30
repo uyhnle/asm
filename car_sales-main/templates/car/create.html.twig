@@ -1,0 +1,50 @@
+{%extends 'base.html.twig' %}
+{% block body %}
+    {{ form_start(form) }}
+    <div class="form-group">
+        <label for="Carname">Car Name:</label>
+        {{ form_widget(form.Carname,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Enter car name'
+            }
+        }) }}
+        <div class="invalid-feedback">
+            {{ form_errors(form.Carname) }}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Carbrand">Brand :</label>
+        {{ form_widget(form.Carbrand,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Brand'
+            }
+        }) }}
+    </div>
+    <div class="form-group">
+        <label for="Carprice">Price :</label>
+        {{ form_widget(form.Carprice,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Price'
+            }
+        }) }}
+    </div>
+    <div class="form-group">
+        <label for="Supplier">SupplierID :</label>
+        {{ form_widget(form.Supplier,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Supplier'
+            }
+        }) }}
+        <div class="invalid-feedback">
+            {{ form_errors(form.Supplier) }}
+        </div>
+    </div>
+
+
+    <input type="submit" name="create_car" value="Create" class="btn btn-primary"/>
+    {{ form_end(form) }}
+{% endblock %}

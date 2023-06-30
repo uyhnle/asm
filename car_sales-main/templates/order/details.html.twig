@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a href="{{ path('order_list') }}" class="btn btn-default">Back to Order List </a>
+    <hr/>
+    <h2 class="page-header">Order ID: {{ orders.id }}</h2>
+    <ul class="list-group">
+        <li class="list-group-item">Discount: {{ orders.Discount }}</li>
+    </ul>
+{% endblock %}
